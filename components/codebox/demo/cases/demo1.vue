@@ -4,11 +4,13 @@
       :mask="true"
       :maxlength="6"
       v-model="code"
+      @submit="onSubmit"
     />
   </div>
 </template>
 
-<script>import {Codebox} from 'mand-mobile'
+<script>
+import {Codebox} from 'mand-mobile'
 
 export default {
   name: 'codebox-demo',
@@ -24,5 +26,11 @@ export default {
       code: '',
     }
   },
+  methods: {
+    onSubmit(value) {
+      console.log('submit', value);
+    }
+  }
 }
-</script>
+
+</script>
